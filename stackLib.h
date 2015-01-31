@@ -1,9 +1,12 @@
+#include "linkedList.h"
 typedef struct stack Stack;
 typedef Stack* Stack_ptr;
 
 struct stack {
-	Stack_ptr top;
-	int count;
+	LinkedList* list;
+	Node_ptr* top;
 };
 
 Stack createStack(void);
+int push(Stack, void*);
+void* pop(Stack);
