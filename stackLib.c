@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 Stack createStack(void) {
-	LinkedList* list = malloc(sizeof(LinkedList) * 1);
+	LinkedList* list = calloc(sizeof(LinkedList), 1);
 	return (Stack){list, &list->tail};
 }
 
